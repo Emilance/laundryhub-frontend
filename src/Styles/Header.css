@@ -27,6 +27,7 @@ small {
 }
 .header__links {
   text-transform: uppercase;
-  color: #d83bd2 !important;
+  color: #dfd0de !important;
   margin-left: 20px;
+  font-weight: 700 !important;
 }

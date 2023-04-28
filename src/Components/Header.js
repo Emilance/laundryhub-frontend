@@ -5,10 +5,18 @@ import "../Styles/Header.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
+import { getToken, removeToken } from "../utils/auth";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
-  const user = useSelector(selectUser);
+  const navigate = useNavigate();
 
+  const isUserLogin = getToken()
+  
+  const logOut = async () =>{
+    await removeToken()
+    navigate("/")
+  }
   return (
     <div className="header">
       <Navbar
@@ -55,14 +63,14 @@ function Header() {
                   My Orders
                 </NavDropdown.Item>
 
-                {!user ? (
+                {!isUserLogin ? (
                   <NavDropdown.Item className="header__links" href="/login">
                     Login
                   </NavDropdown.Item>
                 ) : (
                   <NavDropdown.Item
                     className="header__links"
-                    onClick={() => auth.signOut()}
+                    onClick={() =>logOut()}
                   >
                     logOut
                   </NavDropdown.Item>

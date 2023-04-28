@@ -1,43 +1,71 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import { auth, provider } from '../firebase';
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-
+import { Await, useNavigate } from 'react-router-dom';
+import { login, signInWithGoogle } from '../data/endpoints';
 import '../Styles/Login.css'
+import { setToken, setUser } from '../utils/auth';
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const signIn = (e) => {
+  const [userDetails, setUserDetails] = useState({ email:"", password:""});
+
+  //handle input change
+
+  const handleChange = (e) =>{
+    const { name, value } = e.target;
+    setUserDetails(prevState => ({ ...prevState, [name]: value }));
+  }
+  const signIn = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password).then((user) => {
-      console.log(user);
-      alert("successfully logged in");
-      navigate("/");
-    });
+    try {
+      const reqResp = await login(userDetails)
+      await setToken(reqResp.data.token)
+      await setUser(reqResp.data)
+      await navigate("/")
 
-  };
+  } catch (error) {
+      console.log(error)
+      console.log(error.response.data)
 
-  const signInWithGoogle = async () => {
-    await signInWithPopup(auth, provider).then((user) => {
-      console.log(user);
-      alert("Successfully logged in");
-      navigate("/");
-    });
+
+  }
 
 
   };
+
+ const signInWithOauth = async () => {
+      try {
+      const resp = await  signInWithGoogle()
+      console.log(resp)
+      } catch (error) {
+        console.log(error)
+      }
+
+}
+
+
   return (
     <div className='login'>
       <form>
-        <input type="email" placeholder='Enter your email' value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type="email"
+         placeholder='Enter your email'
+         name="email"
+          value={userDetails.email} 
+          onChange={handleChange}
+          />
+
+        <input type="password" 
+        placeholder='Password' 
+        name="password"
+        value={userDetails.password}  
+        onChange={handleChange}
+
+        />
+
         <Button onClick={signIn} > Sign In</Button>
         <p>or</p>
-        <div>     <Button onClick={signInWithGoogle} className='login__white'>
+        <div>     <Button  onClick={() => signInWithOauth()} className='login__white'>
           Sign In with Google</Button>
         </div>
 
