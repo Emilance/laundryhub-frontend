@@ -68,12 +68,21 @@ function Header() {
                     Login
                   </NavDropdown.Item>
                 ) : (
+                  <>
+                  
+                  <NavDropdown.Item
+                    className="header__links"
+                    onClick={() =>navigate("/myschedules")}
+                  >
+                    myschedules
+                  </NavDropdown.Item>
                   <NavDropdown.Item
                     className="header__links"
                     onClick={() =>logOut()}
                   >
                     logOut
                   </NavDropdown.Item>
+                  </>
                 )}
               </NavDropdown>
             </Nav>

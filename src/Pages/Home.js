@@ -61,6 +61,7 @@ function Home() {
           View More
         </Button>
       </div>
+      
       <Team />
       <Stats />
       <PricingScreen />

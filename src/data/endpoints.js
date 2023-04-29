@@ -16,4 +16,15 @@ export const signInWithGoogle = async() =>{
     return resp
 }
 
+export const getMyBooking = async() =>{
+    const resp = await http.get("/booking/mybookings")
+   
+    return resp
+}
+export const createBooking = async() =>{
+    const resp = await http.post("/booking")
+   
+    return resp
+}
+
 

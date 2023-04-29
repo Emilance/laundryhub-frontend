@@ -14,6 +14,8 @@ import { useDispatch } from "react-redux";
 import { auth } from "./firebase";
 import { login, logout } from "./features/userSlice";
 import Footer from "./Components/Footer";
+import SingleService from "./Pages/SingleService";
+import MySchedule from "./Pages/MySchedules";
 
 function App() {
   const dispatch = useDispatch();
@@ -48,6 +50,8 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/order" element={<Order />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/service/:serviceId" element={<SingleService />} />
+            <Route path="/myschedules" element={<MySchedule />} />
           </Routes>
         </div>
       </div>
