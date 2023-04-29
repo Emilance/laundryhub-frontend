@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap';
-import { Await, useNavigate } from 'react-router-dom';
-import { login, signInWithGoogle } from '../data/endpoints';
+import {  useNavigate } from 'react-router-dom';
+import { login } from '../data/endpoints';
 import '../Styles/Login.css'
 import { setToken, setUser } from '../utils/auth';
 
@@ -9,7 +10,7 @@ function Login() {
   const navigate = useNavigate();
 
   const [userDetails, setUserDetails] = useState({ email:"", password:""});
-
+  
   //handle input change
 
   const handleChange = (e) =>{
@@ -27,22 +28,18 @@ function Login() {
   } catch (error) {
       console.log(error)
       console.log(error.response.data)
-
-
   }
-
 
   };
 
- const signInWithOauth = async () => {
-      try {
-      const resp = await  signInWithGoogle()
-      console.log(resp)
-      } catch (error) {
-        console.log(error)
-      }
+  const googleOAUth =()=>{
+    window.open(
+      "http://localhost:5000/auth/google" ,
+      "_self"
+    )
+  }
 
-}
+
 
 
   return (
@@ -65,7 +62,7 @@ function Login() {
 
         <Button onClick={signIn} > Sign In</Button>
         <p>or</p>
-        <div>     <Button  onClick={() => signInWithOauth()} className='login__white'>
+        <div>     <Button  onClick={() => googleOAUth()} className='login__white'>
           Sign In with Google</Button>
         </div>
 

@@ -24,3 +24,12 @@
   .schedule-table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
   }
+
+  .tableIcon{
+    cursor: pointer;
+  }
+
+   .tableIcon:hover {
+      transform: scale(1.05);
+      color: #03a9f4;
+   }

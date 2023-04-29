@@ -1,0 +1,74 @@
+.error-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  /* .error-page-container h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  } */
+  
+  .error-page-container p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .error-page-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .error-page-buttons button {
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .error-page-buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .error-page-login-button {
+    background-color: #03a9f4;
+    color: white;
+  }
+  
+  .error-page-home-button {
+    background-color: #e6e6e6;
+    color: #555;
+  }
+  
+  .fancy-text {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    text-align: center;
+    animation: fancy-text-animation 2s ease-in-out infinite;
+  }
+
+  @keyframes fancy-text-animation {
+    0% {
+      letter-spacing: 0.2em;
+    }
+    25% {
+      letter-spacing: 0.22em;
+    }
+    50% {
+      letter-spacing: 0.25em;
+      color:red;
+    }
+    75% {
+        letter-spacing: 0.22em;
+      }
+    100% {
+        letter-spacing: 0.2em;
+      }
+  }

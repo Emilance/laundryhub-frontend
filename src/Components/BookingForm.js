@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { createBooking } from '../data/endpoints';
 import '../Styles//Booking.css';
 
 const Scheduleservice = () => {
+  const navigate = useNavigate();
+  const specservice = useSelector(state => state.service.service)    
   const [booking, setBooking] = useState({service : "",
   date:'', time : "" });
   
   const {service, date , time } = booking
-  const handleSubmit = (event) => {
+  const handleSubmit =async (event) => {
     event.preventDefault();
+    try {
+      
+      const resp = await createBooking(booking)
+      if(resp){
+        navigate("/myschedules")
 
-    console.log(booking);
+      }
+    } catch (error) {
+       console.log(error)
+    }
+    
   };
 
   return (
@@ -20,9 +34,12 @@ const Scheduleservice = () => {
           <label htmlFor="service">Select a Service:</label>
           <select id="service" name="service" value={service} onChange={(event) => setBooking({...booking, service: event.target.value})} required>
             <option value="">-- Select a Service --</option>
-            <option value="Laundry">Laundry</option>
-            <option value="Dry Cleaning">Dry Cleaning</option>
-            <option value="Ironing">Ironing</option>
+            {specservice.map((data, index) =>{
+              return (
+                <option key={index} value={data.title}>{data.title}</option>
+                )
+              })}
+             
           </select>
         </div>
         <div className="form-group">

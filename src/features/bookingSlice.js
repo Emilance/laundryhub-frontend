@@ -10,7 +10,7 @@ export const bookingSlice = createSlice({
 
   reducers: {
     setMyBooking: (state, action) => {
-      state.booking.push(action.payload)
+      state.booking =action.payload
     }
   },
 });

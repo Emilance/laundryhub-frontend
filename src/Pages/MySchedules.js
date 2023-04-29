@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMyBooking } from '../data/endpoints';
+import { deleteBooking, getMyBooking } from '../data/endpoints';
 import { setMyBooking } from '../features/bookingSlice';
+import {AiFillDelete} from 'react-icons/ai'
 import '../Styles/MySchedule.css';
 
 
@@ -12,9 +13,17 @@ const MySchedule = () => {
     const updateBooking = async () =>{
         try {
             const resp = await getMyBooking()
-            dispatch(setMyBooking(resp.data[0]))
+            dispatch(setMyBooking(resp.data))
         } catch (error) {
             console.log(error)
+        }
+    }
+    const handleClick  = async (id) =>{
+        try {
+          const resp = await deleteBooking(id)
+          window.location.reload()
+        } catch (error) {
+          console.log(error)
         }
     }
     useEffect(()=> {
@@ -33,15 +42,21 @@ const MySchedule = () => {
               <th>Time</th>
               <th>Service</th>
               <th>Status</th>
+              <th> </th>
+
             </tr>
           </thead>
           <tbody>
             {bookings.map((booking) => (
-              <tr key={booking.id}>
+              <tr key={booking._id}>
                 <td>{booking.date}</td>
                 <td>{booking.time}</td>
                 <td>{booking.service}</td>
                 <td>{booking.status}</td>
+                <td>
+                  <AiFillDelete onClick={()=> handleClick(booking._id)} size="17" className="tableIcon"/>
+                 </td>
+
               </tr>
             ))}
           </tbody>
