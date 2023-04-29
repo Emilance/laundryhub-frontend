@@ -34,7 +34,7 @@ function Login() {
 
   const googleOAUth =()=>{
     window.open(
-      "http://localhost:5000/auth/google" ,
+      "https://laundryhubapi.onrender.com/auth/google" ,
       "_self"
     )
   }
