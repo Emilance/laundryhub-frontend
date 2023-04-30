@@ -18,6 +18,7 @@ import { getToken } from "./utils/auth";
 import ProtectedErrorPage from "./Pages/ProtectedErrorPage";
 import Header from "./Components/Header";
 import PaymentForm from "./Pages/PaymentForm";
+import PaymentSuccess from "./Pages/PaymentSuccess";
 
 function App() {
   const dispatch = useDispatch();
@@ -44,9 +45,9 @@ function App() {
             <Route path="/order" element={<Order />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service/:serviceId" element={isUserlogin ?  <SingleService/> : <ProtectedErrorPage />} />
-            <Route path="/payment" element={isUserlogin ?  <PaymentForm/> : <ProtectedErrorPage />} />
+            <Route path="/payment" element={isUserlogin ?  [<PaymentForm/>, <Footer/>] : <ProtectedErrorPage />} />
             <Route path="/myschedules" element={isUserlogin ?  [<MySchedule />, <Footer/>] : <ProtectedErrorPage />} />
-            <Route path="/my" element={<ProtectedErrorPage />} />
+            <Route path="/payment-success" element={<PaymentSuccess />} />
 
           </Routes>
         </div>

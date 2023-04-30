@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.payment-success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 6rem;
+    background-color: #f2f2f2;
+  }
+  
+  .payment-success-container h1 {
+    font-size: 2.5rem;
+    font-family: 'Amaranth', sans-serif;
+
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .payment-success-container p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .payment-success-container img {
+    width: 70%;
+    height: 15rem;
+    margin-top: 2rem;
+  }
+  

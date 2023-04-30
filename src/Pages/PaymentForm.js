@@ -11,8 +11,8 @@ const PaymentForm = () => {
     state: "", country : ""
   })
 
-  const serviceTitle = useSelector(state => state.currentOrder.currentOrder)
-  const service = useSelector(state => state.service.service.find(service => service.title == serviceTitle))    
+  const serviceObj = useSelector(state => state.currentOrder.currentOrder)
+  const service = useSelector(state => state.service.service.find(service => service.title == serviceObj.service))    
   if(service) {
     var amount = service.price
 
@@ -27,8 +27,12 @@ const PaymentForm = () => {
       setIsLoading(true);
       const resp = await makePayment({
         ...paymentDetails, amount , description : service.title,
-
+         Id : serviceObj.id
       })
+
+      if (resp.data.url) {
+        window.location.href = resp.data.url
+      }
       console.log(resp)
     } catch (error) {
       setIsLoading(false)

@@ -24,7 +24,7 @@ function Header() {
         bg="dark"
         variant="dark"
       >
-        <Container style={{ minHeight: "4rem" , backgroundColor: "rgba(138, 129, 129, 0.041)" }} >
+        <Container   style={{ minHeight: "4rem" , backgroundColor: "rgba(138, 129, 129, 0.041)" }} >
           <Navbar.Brand  className="HeaderLogo" href="/">Laundry<span className="halfPart">Hub</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

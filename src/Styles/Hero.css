@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 .hero {
-    height: 90vh;
-    background-image: url('../../public/images/image4.jpg');
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(59, 44, 44, 0.774), rgba(255, 255, 255, 0.281)), url('../../public/images/image4.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -41,7 +41,7 @@
     letter-spacing: 1px;
     background-color: rgba(255, 255, 255, 0.562);
     color: #000;
-    border: none;
+    border: 2px solid tomato;
     border-radius: 1rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
@@ -50,4 +50,6 @@
   .hero__cta:hover, .hero__content > a:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    border: none;
+    color :#000;
   }

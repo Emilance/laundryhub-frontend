@@ -31,7 +31,10 @@ const MySchedule = () => {
     }
   };
  const payForService = (param) =>{
-    dispatch(setCurrentOrder(param))
+    dispatch(setCurrentOrder({
+      service : param.service,
+      id :param._id
+    }))
     navigate("/payment")
  }
 
@@ -77,7 +80,7 @@ const MySchedule = () => {
                   <AiFillDelete onClick={() => handleClick(booking._id)} size="17" className="tableIcon" />
                 </td>
                 <td>
-                  <RiMoneyDollarCircleLine onClick={() => payForService(booking.service)} size="17" className="tableIcon" />
+                  <RiMoneyDollarCircleLine onClick={() => payForService(booking)} size="17" className="tableIcon" />
                 </td>
               </tr>
             ))}
