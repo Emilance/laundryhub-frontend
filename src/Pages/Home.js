@@ -9,12 +9,13 @@ import "../Styles/Home.css";
 import PricingScreen from "../Components/PricingScreen";
 import Testimonial from "../Components/Testimonial";
 import { useNavigate } from "react-router-dom";
+import Hero from "../Components/HeroSection";
 
 function Home() {
   const history = useNavigate();
   return (
     <div className="home">
-      <Banner />
+      <Hero />
       <HomeAbout />
 
       <div className="home__service">
@@ -38,7 +39,7 @@ function Home() {
               description="Your windows are our priority and are washed to our best quality"
             />
           </div>
-          <img src="../images/image4.jpg" alt="" />
+          <img src="../images/ourserviceimg.png" alt="" />
           <div className="home__content">
             <Service
               image="../images/cloth.jpg"
@@ -52,18 +53,11 @@ function Home() {
             />
           </div>
         </div>
-        <Button
-          onClick={() => {
-            history("/service");
-          }}
-          color="primary"
-        >
-          View More
-        </Button>
+      
       </div>
       
-      <Team />
       <Stats />
+      <Team />
       <PricingScreen />
       <div className="home__testimonial">
         <h3>What our customers are saying</h3>

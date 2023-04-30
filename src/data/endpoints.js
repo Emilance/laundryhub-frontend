@@ -29,4 +29,10 @@ export const deleteBooking = async(param) =>{
     return resp
 }
 
+export const makePayment = async(param) =>{
+    const resp = await http.post("/payment", param)
+   
+    return resp
+}
+
 

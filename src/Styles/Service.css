@@ -10,3 +10,11 @@
 width: 100px !important;
 height: 100px !important;
 }
+
+.service__content > h3 {
+  color: tomato;
+  font-size: 1.4rem;
+}
+.service__content > p{
+  color: #333;
+}

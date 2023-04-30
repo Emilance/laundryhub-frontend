@@ -1,54 +1,90 @@
-.schedule-container {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    padding: 20px;
-    box-shadow: 0px 0px 1px black;
-    border-radius: 1rem;
-  }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  select,
-  input[type='date'],
-  input[type='time'] {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button[type='submit'] {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #03a9f4;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  button[type='submit']:hover {
-    background-color: #3487ad;
-  }
+.booking-schedule-container {
+  width: 60%;
+  height: fit-content;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  box-shadow: 0px 0px 1px black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .formTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+} */
+
+.formTitle {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin: 1.2rem  1.2rem 0 1.2rem;
+  font-size:1.5rem;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.formTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d83bd2;
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.formTitle:hover::after {
+  transform: scaleX(1);
+}
+.booking-schedule-container >.bookingForm {
+  display: flex;
+  max-width: 100%;
+  margin: 0;
+  flex-direction: column;
+}
+
+.booking-form-group {
+  margin-bottom: 20px;
+  width: 100% ;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+select,
+input[type='date'],
+input[type='time'] {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type='submit'] {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: tomato;
+  border: none;
+  width: 90%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: rgb(129, 77, 68);
+}

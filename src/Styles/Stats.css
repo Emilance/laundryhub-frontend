@@ -1,34 +1,68 @@
-.stats{
+.stats {
     margin: 20px;
+    margin-top: -5rem;
     padding: 40px;
-    background: #FF5F6D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.stats > h3{
+    background: url("../../public/images/slider4.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    }
+    
+    .stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .stats > h3 {
     text-align: center;
-    color: white;
+    color: white ;
+    z-index: 200;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 23px;
-
-}
-.stats__content{
+    }
+    
+    .stats__content {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
     padding: 30px;
-}
-.stats__container{
+    }
+    
+    .stats__container {
     display: flex;
     flex-direction: column;
     padding: 15px;
-}
-.stats__container >h3{
+    }
+    
+    .stats__container > h3 {
     font-size: 20px;
- color: white;
- text-transform: uppercase;
-}
+    color: white;
+    text-transform: uppercase;
+    }
+    
+    .stats__container > h4 {
+    font-size: 36px;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    animation: countUp 2s ease-in-out;
+    animation-fill-mode: forwards;
+    }
+    
+    @keyframes countUp {
+    from {
+    opacity: 0;
+    transform: translateY(50px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    }

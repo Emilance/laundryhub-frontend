@@ -1,21 +1,26 @@
 import React from "react";
 import "../Styles/HomeAbout.css";
+import { FaShoppingCart, FaPhone, FaSpinner } from "react-icons/fa";
+
 function HomeAbout() {
   return (
     <div className="home__about">
-      <h2>How we work</h2>
+      <h2>How We Work</h2>
       <div className="home__about-container">
         <div className="home__about-content">
-          <h3>Packages</h3>
-          <p>Choose the package you want from the services we offer</p>
+          <FaShoppingCart size={50} color="#5851DB" />
+          <h3>Choose Your Package</h3>
+          <p>Select from our range of services to suit your needs</p>
         </div>
         <div className="home__about-content">
+          <FaPhone size={50} color="#5851DB" />
           <h3>Contact Us</h3>
-          <p>You can contact Us via message through the app or call us</p>
+          <p>Get in touch with us by phone or through our app</p>
         </div>
         <div className="home__about-content">
-          <h3>Just Relax</h3>
-          <p>We will come and pick the laundry and clean it for you</p>
+          <FaSpinner size={50} color="#5851DB" />
+          <h3>Sit Back and Relax</h3>
+          <p>We'll collect your laundry and have it clean in no time</p>
         </div>
       </div>
     </div>

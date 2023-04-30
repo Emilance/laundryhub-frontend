@@ -1,13 +1,11 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import { NavDropdown, Nav, Container } from "react-bootstrap";
-import "../Styles/Header.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-import { auth } from "../firebase";
 import { getToken, removeToken } from "../utils/auth";
 import { useNavigate } from "react-router-dom";
-
+import "../Styles/Header.css"
 function Header() {
   const navigate = useNavigate();
 
@@ -26,8 +24,8 @@ function Header() {
         bg="dark"
         variant="dark"
       >
-        <Container>
-          <Navbar.Brand href="/">LaundryHub Home Cleaners</Navbar.Brand>
+        <Container style={{ minHeight: "4rem" , backgroundColor: "rgba(138, 129, 129, 0.041)" }} >
+          <Navbar.Brand  className="HeaderLogo" href="/">Laundry<span className="halfPart">Hub</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">

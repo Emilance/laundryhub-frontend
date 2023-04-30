@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-import { db } from "../firebase";
 import { collection, onSnapshot } from "firebase/firestore";
 
 import "../Styles/Order.css";
@@ -9,24 +8,6 @@ import "../Styles/Order.css";
 function Order() {
   const [order, setOrder] = useState([]);
   const user = useSelector(selectUser);
-  useEffect(() => {
-    if (user) {
-      onSnapshot(
-        collection(db, "customers", user.uid, "subscriptions"),
-        (snapshot) => {
-          const updatedDocuments = snapshot.docs.map((doc) => {
-            console.log(doc);
-            return {
-              id: doc.id,
-              product: doc.data().items[0].price.product,
-              price: doc.data().items[0].price,
-            };
-          });
-          setOrder(updatedDocuments);
-        }
-      );
-    }
-  }, [user?.uid]);
 
   console.log(order);
   return (

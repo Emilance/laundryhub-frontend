@@ -7,8 +7,8 @@ import '../Styles/Singleservice.css';
 
 const SingleService = () => {
     const {serviceId} = useParams()
-    const service = useSelector(state => state.service.service.find(service => service.id == serviceId))
-  return (
+    const service = useSelector(state => state.service.service.find(service => service.id == serviceId))    
+    return (
       <div>
       <h3 className='headerTest'>Scroll down to schedule</h3>
     <div className="product-container">

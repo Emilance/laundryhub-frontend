@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.hero {
+    height: 90vh;
+    background-image: url('../../public/images/image4.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding-top: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero__content {
+    text-align: center;
+    color: #fff;
+  }
+  .hero__content > a {
+    text-decoration: none;
+  }
+  .hero__content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero__content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Amaranth', sans-serif;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero__cta ,.hero__content > a {
+    display: inline-block;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.562);
+    color: #000;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .hero__cta:hover, .hero__content > a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  }
