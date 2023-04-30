@@ -36,7 +36,7 @@ function Login() {
   const googleOAuth = () => {
    try {
      setIsLoading(true)
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open("https://laundryhubapi.onrender.com/auth/google", "_self");
    } catch (error) {
     setIsLoading(false)
     console.log(error)
