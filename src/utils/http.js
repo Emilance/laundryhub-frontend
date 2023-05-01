@@ -3,7 +3,7 @@ import {getAuthCredentials} from "./auth"
 
 const http = axios.create({
   timeout: 30000,
-  baseURL:"https://laundryhubapi.onrender.com",
+  baseURL:"https://elated-dirndl-tuna.cyclic.app",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
