@@ -35,7 +35,7 @@ const OrderDashboard = () => {
               <td>{index + 1}</td>
              {order.user ? <td>{order.user.name}</td> : <td>acct deleted</td> }
               <td>{order.service}</td>
-              <td>{order.booking.date}</td>
+              <td>{order.booking && order.booking.date}</td>
               <td className={order.orderStatus == "active" ? "redColor" : "greenColor"}>{order.orderStatus}</td>
             </tr>
            ))} 
