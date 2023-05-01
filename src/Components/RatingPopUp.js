@@ -40,6 +40,8 @@ const RatingPopUp = ({ isOpen, closeModal, data }) => {
         console.log(resp)
         setIsLoading(true)
         closeModal();
+        window.location.reload();
+
     } catch (error) {
         setIsLoading(false)
         console.log(error)
