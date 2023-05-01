@@ -47,7 +47,7 @@ const UserDashboard = () => {
                 <th>{index +1}</th>
               <td>{user.name}</td>
               <td>{user.email}</td>
-              <td>bookings</td>
+              <td></td>
               <td></td>
               <td>{user.isGoogleLogin}</td>
               <td>

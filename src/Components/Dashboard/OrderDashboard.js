@@ -22,7 +22,7 @@ const OrderDashboard = () => {
         <table>
         <thead>
           <tr>
-            <th>Order ID</th>
+            <th>S/N</th>
             <th>Customer Name</th>
             <th>Service Type</th>
             <th>Date</th>
@@ -32,7 +32,7 @@ const OrderDashboard = () => {
         <tbody>
           {data.length > 0  && data.map((order, index) => (
             <tr key={index}>
-              <td>tello</td>
+              <td>{index + 1}</td>
               <td>{order.user.name}</td>
               <td>{order.service}</td>
               <td>{order.booking.date}</td>

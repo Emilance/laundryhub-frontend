@@ -32,8 +32,8 @@ function Header() {
               <Nav.Link className="header__links" href="/">
                 Home
               </Nav.Link>
-              <Nav.Link className="header__links" href="/pricing">
-                Pricing
+              <Nav.Link className="header__links" href="/service">
+                Services
               </Nav.Link>
               <Nav.Link className="header__links" href="/contact">
                 Contact Us
