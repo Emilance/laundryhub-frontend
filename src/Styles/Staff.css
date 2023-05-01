@@ -1,39 +1,83 @@
-.staff__container{
+.staff {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-
-}
-.staff__content{
+    background-color: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  .staff__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 20rem;
+    width: 90%;
+  }
+  
+  .staff__content {
     display: flex;
-    max-width: 330px;
-    margin: 15px;
-    padding: 20px;
-    border-radius: 20px;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    background-color: white;
-    box-shadow: 1px 2px 2px 3px rgba(0,0,0,0.09);
-}
-.staff__content > img{
-    width: 240px;
-    height: 200px;
-    padding: 10px;
+    justify-content: center;
+    background-color: #fff;
+    padding: 40px 30px;
     border-radius: 20px;
-    transition: all 1s ease-in-out;
-    cursor: pointer;
-}
-.staff__content > img:hover{
-    transform: scale(1.03);
-}
-.staff__content> h3{
-    color: tomato;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-.staff__content > p{
-    letter-spacing: 2px;
-    line-height: 2;
-}
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .staff__content:hover {
+    transform: translateY(-10px);
+  }
+  
+  .staff__content > img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  
+  .staff__content > h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .staff__content > h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .staff__content > p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .staff__content > .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .staff__content > .icons > * {
+    margin: 0 5px;
+    font-size: 24px;
+    color: #666;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .staff__content > .icons > *:hover {
+    color: #f77;
+    transform: translateY(-3px);
+  }
+  

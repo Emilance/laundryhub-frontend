@@ -67,7 +67,6 @@ function Home() {
       
       <Stats />
       <Team />
-      <PricingScreen />
       <div className="home__testimonial">
         <h3>What our customers are saying</h3>
         <Testimonial />

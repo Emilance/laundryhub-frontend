@@ -1,20 +1,20 @@
 import React from "react";
-import "../Styles/Banner.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "../Styles/Testimonial.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 function Testimonial() {
   return (
     <Carousel
-      className="banner testimonial__banner"
+      className="testimonial__carousel"
       autoPlay
       infiniteLoop
       showIndicators={false}
       showStatus={false}
-      interval={3000}
+      interval={5000}
       showThumbs={false}
     >
-      <div className="content__items testimonial__item">
+      <div className="testimonial__item">
         <h3>Gayle Hyslop</h3>
         <h4>ghyslop19@about.com</h4>
         <p>
@@ -25,8 +25,7 @@ function Testimonial() {
           laundry routine.
         </p>
       </div>
-
-      <div className="content__items  testimonial__item">
+      <div className="testimonial__item">
         <h3>Reggie Riepl</h3>
         <h4>rriepl2b@blog.com</h4>
         <p>
@@ -34,10 +33,10 @@ function Testimonial() {
           extremely satisfied with the service. The team is always prompt and
           professional, and my clothes come back looking and smelling fresh. I
           especially appreciate the option to schedule recurring orders so I
-          never have to worry about forgetting to do laundry
+          never have to worry about forgetting to do laundry.
         </p>
       </div>
-      <div className="content__items  testimonial__item">
+      <div className="testimonial__item">
         <h3>Leodora Crowche</h3>
         <h4>lcrowche1q@diigo.com</h4>
         <p>
