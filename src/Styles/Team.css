@@ -1,8 +1,10 @@
 
+
 .team h2{
     text-align: center;
     color: tomato;
     text-transform: uppercase;
+    margin-bottom: 4rem !important;
 }
 .team__content{
     display: flex;
