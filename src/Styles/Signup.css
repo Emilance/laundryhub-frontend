@@ -5,6 +5,9 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  background-image:linear-gradient(to bottom, rgba(34, 25, 25, 0.774), rgba(20, 12, 12, 0.363)), url('../../public//images/image2.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
 
 .signup-container h3 {
@@ -12,6 +15,21 @@
   margin-bottom: 2rem;
   text-align: center;
 }
+
+.signup-form  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 5rem auto;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+}
+
 
 form {
   display: flex;
@@ -21,21 +39,19 @@ form {
   width: 90%;
   max-width: 400px;
   padding: 2rem;
-  margin-top: 5rem;
   border-radius: 10px;
   background-color: #f2f2f2;
 }
-
 .input-container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-input {
+.input-container > input {
   width: 100%;
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0.8rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
@@ -44,29 +60,29 @@ input {
   transition: all 0.3s ease-in-out;
 }
 
-input:hover {
+.input-container> input:hover {
   background-color: #d9d9d9;
 }
 
-input:focus {
+.input-container > input:focus {
   background-color: #ffffff;
   box-shadow: 0px 0px 3px #666666;
 }
 
-.signup-button {
+ .signup-form >.signup-button {
   width: 100%;
   margin: 1rem 0;
-  padding: 1rem;
+  padding: .5rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
-  background-color: #4caf50;
+  background-color:tomato;
   color: #ffffff;
   outline: none;
   transition: all 0.3s ease-in-out;
 }
 
-.signup-button:hover {
-  background-color: #3e8e41;
+.signup-form .signup-button:hover {
+  background-color: rgba(255, 99, 71, 0.521);
 }

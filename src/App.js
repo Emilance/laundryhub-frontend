@@ -19,6 +19,7 @@ import ProtectedErrorPage from "./Pages/ProtectedErrorPage";
 import Header from "./Components/Header";
 import PaymentForm from "./Pages/PaymentForm";
 import PaymentSuccess from "./Pages/PaymentSuccess";
+import AdminDashboard from "./Pages/AdminDashboard";
 
 function App() {
   const dispatch = useDispatch();
@@ -48,6 +49,7 @@ function App() {
             <Route path="/payment" element={isUserlogin ?  [<PaymentForm/>, <Footer/>] : <ProtectedErrorPage />} />
             <Route path="/myschedules" element={isUserlogin ?  [<MySchedule />, <Footer/>] : <ProtectedErrorPage />} />
             <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="/admin" element={<AdminDashboard />} />
 
           </Routes>
         </div>

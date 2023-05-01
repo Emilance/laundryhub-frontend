@@ -66,7 +66,7 @@ function Login() {
           Sign In
         </Button>
         <p>or</p>
-        <Button className="login__button signinGoogle" onClick={googleOAuth}>
+        <Button className="login__button  signinGoogle" onClick={googleOAuth}>
         {isLoading ? <div className="spinner"></div> : " Sign In with Google"}
 
         </Button>
@@ -80,8 +80,7 @@ function Login() {
         </Button>
       </form>
 
-      <div className="login__circle"></div>
-      <div className="login__rect"></div>
+     
     </div>
   );
 }

@@ -7,6 +7,8 @@ import '../Styles/Signup.css';
 
 function Signup() {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+
   const [userDetails, setUserDetails] = useState({ name: '', email: '', password: '' });
 
   const handleChange = (e) => {
@@ -17,11 +19,13 @@ function Signup() {
   const signUp = async (e) => {
     e.preventDefault();
     try {
+      setIsLoading(true)
       const reqResp = await createUser(userDetails);
       await setToken(reqResp.data.token);
       await setUser(reqResp.data);
       await navigate('/');
     } catch (error) {
+      setIsLoading(false)
       console.log(error);
       console.log(error.response.data);
     }
@@ -58,7 +62,7 @@ function Signup() {
           />
         </div>
         <Button className="signup-button" onClick={signUp}>
-          Sign Up
+      {isLoading ? <div className="spinner"></div> : "Sign Up"}
         </Button>
       </form>
     </div>

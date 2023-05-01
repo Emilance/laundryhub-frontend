@@ -28,6 +28,11 @@ export const deleteBooking = async(param) =>{
    
     return resp
 }
+export const deleteUser = async(param) =>{
+    const resp = await http.delete(`/user/${param}`)
+   
+    return resp
+}
 
 export const makePayment = async(param) =>{
     const resp = await http.post("/payment", param)
@@ -35,4 +40,28 @@ export const makePayment = async(param) =>{
     return resp
 }
 
+export const getMyOrders = async () =>{
+    const resp = await http.get("/order/myorders")
+   
+    return resp
+}
+export const updateOrder = async (param, body) =>{
+    const resp = await http.patch(`/order/${param}`, body )
+   
+    return resp
+}
 
+
+export const getAllUsers = async () =>{
+    const resp = await http.get("/user")
+    return resp
+}
+
+export const getAllBookings = async () =>{
+    const resp = await http.get("/booking")
+    return resp
+}
+export const getAllOrders = async () =>{
+    const resp = await http.get("/order")
+    return resp
+}

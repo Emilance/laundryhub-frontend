@@ -21,7 +21,7 @@
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: #d83bd2;
+    background-color: #3b7fd8;
     transform: scaleX(0.3);
     transform-origin: left;
     transition: transform 0.3s ease-out;
@@ -63,7 +63,7 @@
     text-transform: uppercase;
     font-size: 24px;
     letter-spacing: 2px;
-    color: #5851DB;
+    color: #3b7fd8;
   }
   
   .home__about-content > p {

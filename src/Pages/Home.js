@@ -27,17 +27,22 @@ function Home() {
               image="../images/cloth.jpg"
               name="Cloth washing"
               description="Your clothes are our priority and are washed to our best quality"
-            />
+              side="left"
+           />
             <Service
               image="../images/carpet.jpg"
               name="Carpet washing"
               description="Your carpets are our priority and are washed to our best quality"
-            />
+              side="left"
+
+          />
             <Service
               image="../images/window.jpg"
               name="Window Cleaning"
               description="Your windows are our priority and are washed to our best quality"
-            />
+              side="left"
+
+          />
           </div>
           <img src="../images/ourserviceimg.png" alt="" />
           <div className="home__content">
@@ -45,11 +50,15 @@ function Home() {
               image="../images/cloth.jpg"
               name="Cloth washing and Drying"
               description="Your clothes are our priority and are washed to our best quality"
-            />
+              side="right"
+
+           />
             <Service
               image="../images/image6.jpg"
               name="Cloth Ironing"
               description="Your clothes are our priority and are washed to our best quality"
+              side="right"
+
             />
           </div>
         </div>
