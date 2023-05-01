@@ -15,7 +15,7 @@ const OrderDashboard = () => {
      useEffect(() =>{
         fetchOrder()
      },[])
-
+  console.log(data)
     return ( 
         <div className="table-container">
         <h2>Recent Orders</h2>
@@ -33,7 +33,7 @@ const OrderDashboard = () => {
           {data.length > 0  && data.map((order, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>{order.user.name}</td>
+             {order.user ? <td>{order.user.name}</td> : <td>acct deleted</td> }
               <td>{order.service}</td>
               <td>{order.booking.date}</td>
               <td className={order.orderStatus == "active" ? "redColor" : "greenColor"}>{order.orderStatus}</td>
