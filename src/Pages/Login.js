@@ -9,11 +9,13 @@ import { setToken, setUser } from '../utils/auth';
 function Login() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const [userDetails, setUserDetails] = useState({ email: "", password: "" });
 
   // handle input change
   const handleChange = (e) => {
+    setError("")
     const { name, value } = e.target;
     setUserDetails((prevState) => ({ ...prevState, [name]: value }));
   };
@@ -21,12 +23,14 @@ function Login() {
   // handle sign in
   const signIn = async (e) => {
     e.preventDefault();
+    setError("")
     try {
       const reqResp = await login(userDetails);
       await setToken(reqResp.data.token);
       await setUser(reqResp.data);
       await navigate("/");
     } catch (error) {
+      setError(error.response.data)
       console.log(error);
       console.log(error.response.data);
     }
@@ -34,9 +38,10 @@ function Login() {
 
   // handle Google OAuth
   const googleOAuth = () => {
+    setError("")
    try {
      setIsLoading(true)
-    window.open("https://elated-dirndl-tuna.cyclic.app/auth/google", "_self");
+    window.open("https://laundryhubapi.onrender.com//auth/google", "_self");
    } catch (error) {
     setIsLoading(false)
     console.log(error)
@@ -46,6 +51,9 @@ function Login() {
   return (
     <div className="login">
       <form>
+        {error &&
+        <p className='errorText'>{error}!!!!</p>
+        }
         <input
           type="email"
           placeholder="Enter your email"

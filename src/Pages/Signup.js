@@ -8,16 +8,20 @@ import '../Styles/Signup.css';
 function Signup() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const [userDetails, setUserDetails] = useState({ name: '', email: '', password: '' });
 
   const handleChange = (e) => {
+    setError("")
     const { name, value } = e.target;
     setUserDetails((prevState) => ({ ...prevState, [name]: value }));
   };
 
   const signUp = async (e) => {
     e.preventDefault();
+    setError("")
+
     try {
       setIsLoading(true)
       const reqResp = await createUser(userDetails);
@@ -25,6 +29,7 @@ function Signup() {
       await setUser(reqResp.data);
       await navigate('/');
     } catch (error) {
+      setError(error.response.data)
       setIsLoading(false)
       console.log(error);
       console.log(error.response.data);
@@ -35,7 +40,11 @@ function Signup() {
     <div className="signup-container">
       <h3>Create a new account</h3>
       <form className="signup-form">
+      {error &&
+        <p className='errorText'>{error}!!!!</p>
+        }
         <div className="input-container">
+
           <input
             className="signup-input"
             type="text"
