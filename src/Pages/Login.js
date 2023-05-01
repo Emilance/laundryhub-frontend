@@ -41,7 +41,7 @@ function Login() {
     setError("")
    try {
      setIsLoading(true)
-    window.open("https://elated-dirndl-tuna.cyclic.app/auth/google", "_self");
+    window.open("https://laundryhubapi.onrender.com/auth/google", "_self");
    } catch (error) {
     setIsLoading(false)
     console.log(error)
