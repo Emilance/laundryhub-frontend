@@ -43,7 +43,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/login" element={isUserlogin ? <Home/> :[<Login />, <Footer/>]} />
             <Route path="/signup" element={[<Signup />, <Footer/>]} />
-            <Route path="/order" element={<Order />} />
+            <Route path="/order" element={isUserlogin ?  <Order/> : <ProtectedErrorPage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service/:serviceId" element={isUserlogin ?  <SingleService/> : <ProtectedErrorPage />} />
             <Route path="/payment" element={isUserlogin ?  [<PaymentForm/>, <Footer/>] : <ProtectedErrorPage />} />
