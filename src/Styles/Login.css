@@ -3,7 +3,7 @@
     place-content: center;
     text-align: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image:linear-gradient(to bottom, rgba(34, 25, 25, 0.774), rgba(20, 12, 12, 0.363)), url('../../public//images/image2.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;  

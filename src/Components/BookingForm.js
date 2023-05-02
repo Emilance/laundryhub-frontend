@@ -75,7 +75,7 @@ const Scheduleservice = () => {
           <label htmlFor="map">Select your location on the map:</label>
           <div id="map" style={{ height: '400px', width: '100%' }}></div>
         </div> */}
-        <button  type="submit"> {isLoading ? <div className="spinner"></div> : "Book Now"}Book Now</button>
+        <button  type="submit"> {isLoading ? <div className="spinner"></div> : "Book Now"}</button>
       </form>
     </div>
   );
