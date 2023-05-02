@@ -1,5 +1,4 @@
 import React from "react";
-// import { Player } from "video-react";
 import "../Styles/About.css";
 import Icons from "../Components/Icons";
 import Staff from "../Components/Staff";
@@ -11,12 +10,13 @@ function About() {
       <div className="about__container">
         <div className="about__us">
           <div className="about__video">
-            {/* <Player
-              // className="about__video"
-              src="../video/advert.mp4"
-              poster="../images/image4.jpg"
-              // primaryColor="red"
-            /> */}
+            <video
+             className="about__video"
+             src="../video/advert.mp4"
+             
+             autoPlay
+             controls
+            /> 
           </div>
           <div className="about__us-content">
             <p>

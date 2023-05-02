@@ -65,3 +65,8 @@ export const getAllOrders = async () =>{
     const resp = await http.get("/order")
     return resp
 }
+
+export const getAllRatings = async () =>{
+    const resp = await http.get("/order/rating")
+    return resp
+}

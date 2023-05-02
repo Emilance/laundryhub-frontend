@@ -3,7 +3,7 @@ import "../Styles/Footer.css";
 import Icons from "./Icons";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import ContactPhoneIcon from "@mui/icons-material/ContactPhone";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Footer() {
   const history = useNavigate();
@@ -37,21 +37,23 @@ function Footer() {
           <div className="col-lg-3 col-md-6 col-sm-12">
             <h3 className="footer-title">Useful Links</h3>
             <div className="footer-links">
-              <p className="footer-link" onClick={() => history.push("/about")}>
+              <Link className="footer-link" 
+              to="/about"
+              >
                 About
-              </p>
-              <p
+              </Link>
+              <Link
                 className="footer-link"
-                onClick={() => history.push("/service")}
+                to="/service"
               >
                 Services
-              </p>
-              <p
+              </Link>
+              <Link
                 className="footer-link"
-                onClick={() => history.push("/order")}
+                to="/orders"
               >
                 Orders
-              </p>
+              </Link>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 col-sm-12">

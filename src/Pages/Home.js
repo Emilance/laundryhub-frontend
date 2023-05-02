@@ -1,15 +1,13 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import Banner from "../Components/Banner";
 import HomeAbout from "../Components/HomeAbout";
 import Team from "../Components/Team";
 import Service from "../Components/Service";
 import Stats from "../Components/Stats";
 import "../Styles/Home.css";
-import PricingScreen from "../Components/PricingScreen";
 import Testimonial from "../Components/Testimonial";
 import { useNavigate } from "react-router-dom";
 import Hero from "../Components/HeroSection";
+import ErrorBoundary from "../ErrorBoundary";
 
 function Home() {
   const history = useNavigate();
@@ -69,7 +67,7 @@ function Home() {
       <Team />
       <div className="home__testimonial">
         <h3>What our customers are saying</h3>
-        <Testimonial />
+              <Testimonial />
       </div>
     </div>
   );

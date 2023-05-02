@@ -4,7 +4,6 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Service from "./Pages/Service";
 import Login from "./Pages/Login";
-import Pricing from "./Pages/Pricing";
 import Order from "./Pages/Order";
 import Contact from "./Pages/Contact";
 import "./App.css";
@@ -40,7 +39,6 @@ function App() {
             <Route path="/" element={[<Home />, <Footer />]} />
             <Route path="/about" element={[<About />, <Footer />]} />
             <Route path="/service" element={[<Service />, <Footer />]} />
-            <Route path="/pricing" element={<Pricing />} />
             <Route path="/login" element={isUserlogin ? <Home/> :[<Login />, <Footer/>]} />
             <Route path="/signup" element={[<Signup />, <Footer/>]} />
             <Route path="/order" element={isUserlogin ?  <Order/> : <ProtectedErrorPage />} />

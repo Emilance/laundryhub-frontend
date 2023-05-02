@@ -1,10 +1,11 @@
 .about {
   padding-top: 30px;
+  margin-top: 5rem;
 }
 .about > h3 {
   text-align: center;
   margin-top: 15px;
-  color: #d83bd2;
+  color: tomato;
   text-transform: capitalize;
   letter-spacing: 2px;
   font-size: 23px;
@@ -18,11 +19,9 @@
 
 .about__us {
   display: flex;
-  /* flex-wrap: wrap; */
 
   justify-content: space-evenly;
-  /* align-items: center; */
-  /* text-align: center; */
+  
 }
 
 .about__video {
@@ -41,7 +40,7 @@
 .about__us-content > h2 {
   letter-spacing: 1px;
   font-size: 21px;
-  color: #d83bd2;
+  color: tomato;
   padding-bottom: 7px;
 }
 .about__us-content > h3 {
@@ -58,7 +57,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 23px;
-  color: #d83bd2;
+  color: tomato;
 }
 .quality__container {
   display: flex;
@@ -73,7 +72,7 @@
 }
 .about__quality-content > h3 {
   text-transform: uppercase;
-  color: #d83bd2;
+  color: #333;
   font-size: 20px;
   letter-spacing: 1px;
 }
@@ -84,7 +83,7 @@
 .about__team > h3 {
   text-transform: uppercase;
   text-align: center;
-  color: #d83bd2;
+  color: tomato;
   font-size: 23px;
   letter-spacing: 2px;
 }

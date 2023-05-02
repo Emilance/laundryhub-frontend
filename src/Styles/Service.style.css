@@ -1,7 +1,8 @@
 .services{
     display: flex;
     flex-direction: column;
-  justify-content: center
+  justify-content: center;
+  margin-top: 5rem;
 }
 .services > button{
     width: fit-content;
@@ -29,10 +30,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    box-shadow: 2px 2px 2px 2px ;
+    box-shadow: 2px 2px 2px 2px #333 ;
     width: 80%;
-    margin: 30px;
-    padding: 40px;
+    margin: 1.2rem;
+    padding: 1rem;
 }
 .services__content {
     display: flex;
@@ -61,6 +62,13 @@
     font-size: 20px;
     text-transform: uppercase;
     padding: 10px;
+}
+.services__items> small {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: tomato;
+    margin: 0;
+    padding: 0;
 }
 .services__items > p{
     color: gray;

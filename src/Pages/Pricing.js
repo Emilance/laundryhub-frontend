@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import React from "react";
 
-import PricingScreen from "../Components/PricingScreen";
 
 const override = css`
   display: block;
@@ -10,7 +9,7 @@ const override = css`
 `;
 
 function Pricing() {
-  return <PricingScreen />;
+  return;
 }
 
 export default Pricing;

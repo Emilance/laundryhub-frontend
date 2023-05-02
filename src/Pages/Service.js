@@ -16,16 +16,16 @@ function Service() {
       <div className="service__container">
    {serviceObj.map((data, index) => {
      return(
-    <Link  to={`/service/${data.id}`} >
+    <Link key={index} to={`/service/${data.id}`} >
 
-        <div key={index} className="services__content">
+        <div  className="services__content">
           <img src={data.image} alt="" />
           <div className="services__items">
             <h3>{data.title}</h3>
             <p>
               {data.description}
             </p>
-            <small>{data.price}</small>
+            <small>${data.price}</small>
           </div>
         </div>
     </Link>

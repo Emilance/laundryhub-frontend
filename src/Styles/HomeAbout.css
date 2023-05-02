@@ -35,6 +35,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
+  .home__about-container > a{
+    text-decoration: none;
+  }
   
   .home__about-content {
     margin: 20px;

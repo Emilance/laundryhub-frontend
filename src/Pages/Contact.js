@@ -1,13 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import Icons from "../Components/Icons";
+import emailjs from 'emailjs-com'
+
 import "../Styles/Contact.css";
 
 function Contact() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [messageDetails, setMessageDetails ] = useState({name :'',email :'', message: '' })
+  const [successMessage, setSuccessMessage  ]  = useState("")
+   const handleChange = (e) => {
+    const { name, value } = e.target;
+    setMessageDetails((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+
+
+const {name, email, message} = messageDetails
+  const sendData =  (e ) => {
+        e.preventDefault();
+        console.log(messageDetails)
+           setIsLoading(true)
+             emailjs.sendForm('service_0j9qlv9', 'template_mrwk62n', e.target, '1DW4hN_RXe2eopdg_')
+               .then((result) => {
+                   setSuccessMessage("SUCCESSFULLY SENT !!!")
+                   alert("MESSAGE SENT SUCCESSFULLY")
+                   window.location.reload()
+               
+                 })
+               .catch((error) => {
+                   console.log(error.text);
+                   setIsLoading(false)
+                })
+
+         
+        
+        
+    }
+
   return (
     <div className="contact">
       <h3 className="contact__title">Contact Us</h3>
@@ -51,10 +85,12 @@ function Contact() {
         </div>
         <div className="contact__form">
           <h3 className="form__title">Send a Message</h3>
-          <form className="form__content">
+          <form className="form__content"  onSubmit={sendData}>
             <input
               type="text"
               name="name"
+              value={messageDetails.name}
+              onChange={handleChange}
               placeholder="Your Name"
               className="form__input"
               required
@@ -62,19 +98,23 @@ function Contact() {
             <input
               type="email"
               name="email"
+              value={messageDetails.email}
+              onChange={handleChange}
               placeholder="Your Email"
               className="form__input"
               required
             />
             <textarea
               name="message"
+              value={messageDetails.message}
+              onChange={handleChange}
               placeholder="Enter your message"
               className="form__input form__textarea"
               required
             ></textarea>
-            <Button variant="outline-primary" className="form__button">
-              Send Message
-            </Button>
+            <button type="submit"  variant="outline-primary" className="form__button">
+             {isLoading ? <div className="spinner"></div> : "Send Message"}
+            </button>
           </form>
         </div>
       </div>
