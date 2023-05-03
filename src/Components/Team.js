@@ -9,21 +9,21 @@ function Team() {
         <Staff
           image="../images/team.jpg"
           name="Melvin	Marten"
+          rank="Manager"
+          description="He has been working for the company for a long time and he is a core member"
+          icons
+        />
+        <Staff
+          image="../images/team0.jpg"
+          name="Ebeneser Dewdeny"
           rank="CEO"
           description="He has been working for the company for a long time and he is a core member"
           icons
         />
         <Staff
-          image="../images/team.jpg"
-          name="Ebeneser Dewdeny"
-          rank="Manager"
-          description="He has been working for the company for a long time and he is a core member"
-          icons
-        />
-        <Staff
-          image="../images/team.jpg"
+          image="../images/team2.jpg"
           name="Lusa	Spurman"
-          rank="Manager"
+          rank="Supervisor"
           description="He has been working for the company for a long time and he is a core member"
           icons
         />
