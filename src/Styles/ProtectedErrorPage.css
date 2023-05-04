@@ -39,11 +39,13 @@
   .error-page-login-button {
     background-color: #03a9f4;
     color: white;
+    margin : 1rem
   }
   
   .error-page-home-button {
     background-color: #e6e6e6;
     color: #555;
+    margin: 1rem;
   }
   
   .fancy-text {
@@ -71,4 +73,26 @@
     100% {
         letter-spacing: 0.2em;
       }
+  }
+
+
+
+  @media (max-width: 600px) {
+    .error-page-container{
+      margin-top: 5rem;
+      height: 100vh;
+    
+    }
+    .error-page-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 90vw;
+
+    }
+    .error-page-buttons > a{
+      margin: 1rem;
+    }
+    .error-page-container p{
+      margin: 0;
+    }
   }

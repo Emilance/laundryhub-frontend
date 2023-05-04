@@ -139,13 +139,31 @@
 }
 
 @media (max-width :700px) {
+  .contact {
+    box-sizing: unset;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    margin-top: 7rem;
+  }
+  .contact__subtitle {
+    margin:0 0.3rem;
+  }
   .contact__container{
     flex-direction: column;
   }
   .contact__form {
     margin: 0;
     padding: 0;
-    max-width:80vw;
-    width:80vw;
+    max-width:100%;
+    width:100%;
+  }
+ 
+  .contact__content {
+    width: 100%;
+  }
+  .contact__container  {
+    padding: 0;
+    margin-bottom: 1rem;
   }
 }

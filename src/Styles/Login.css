@@ -77,18 +77,20 @@
        background-color: transparent !important;
        border: 3px solid tomato;
     }
-    @media screen and (max-width= 768px) {
+    @media  (max-width: 768px) {
       .login {
         height: 100%;
       }
       .login > form  {
         padding: 0.8rem;
+        width:90vw;
+        margin-bottom: 1rem;
         }
     .login > form  >input{
-    width: 80%;
+    width: 90%;
     }
     .login > form  >.login__button{
-      width: 80%;
+      width: 90%;
       }
     .signinGoogle{
       font-size: 0.7rem ;

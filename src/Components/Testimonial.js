@@ -19,7 +19,6 @@ function Testimonial() {
   useEffect(()=> {
        fetchRating()
   },[])
-  console.log(ratingsArray)
 
   
   return (
