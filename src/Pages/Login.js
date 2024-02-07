@@ -40,7 +40,7 @@ function Login() {
     setError("")
    try {
      setIsLoading(true)
-    window.open("https://laundryhubapi.onrender.com/auth/google", "_self");
+    window.open("https://laundryhub-5r23.onrender.com/auth/google", "_self");
    } catch (error) {
     setIsLoading(false)
     console.log(error)
