@@ -14,9 +14,10 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width: "60vw",
+    width: "80%",
     height: "auto",
     padding: "20px",
+    boxSizing:"content-box"
   },
 };
 

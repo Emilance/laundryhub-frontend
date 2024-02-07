@@ -88,3 +88,13 @@ button[type='submit'] {
 button[type='submit']:hover {
   background-color: rgb(129, 77, 68);
 }
+
+@media screen  and (max-width: 600px) {
+  .booking-schedule-container {
+   width: 95%;
+ 
+  }
+  .bookingForm {
+    width: 95%;
+  }
+}

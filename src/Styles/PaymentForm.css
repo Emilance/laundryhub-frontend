@@ -65,4 +65,20 @@
       transform: rotate(360deg);
     }
   }
+
+
+@media screen  and (max-width: 600px) {
+  .PaymentFormContainer > .PaymentForm {
+    max-width: 98%;
+
+  }
+  .form-row {
+    width: 100%;
+  }
+  .PaymentFormContainer >h2 {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
   

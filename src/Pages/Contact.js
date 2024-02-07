@@ -25,7 +25,7 @@ const {name, email, message} = messageDetails
         e.preventDefault();
         console.log(messageDetails)
            setIsLoading(true)
-             emailjs.sendForm("service_r4fluna", "template_x96j7i4", e.target, 'TOZsmIRZsorDMQu8S')
+             emailjs.sendForm("service_0j9qlv9", "template_mrwk62n", e.target, '1DW4hN_RXe2eopdg_')
                .then((result) => {
                    setSuccessMessage("SUCCESSFULLY SENT !!!")
                    alert("MESSAGE SENT SUCCESSFULLY")

@@ -14,7 +14,7 @@
     text-align: center;
     color: tomato;
     font-size: 23px;
-    padding-top: 20px;
+    padding-top: 2rem;
     padding-bottom: 20px;
     text-transform: uppercase;
 }
@@ -81,6 +81,30 @@
 
 @media (max-width:700px){
  .services__content {   
-     flex-direction: column;    
+     flex-direction: column; 
+     border-radius: 2rem;   
+    }
+    .services__content > img{
+        width: 100%;
+        border-radius: 20px;
+        transition: all 0.4s ease-in-out;
+        cursor: pointer;
+    }
+
+    .service__container> a {
+        border-radius: 1rem;
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    .services__items > p{
+        font-size: 1rem;
+        padding: 0;
+        text-align: left;
+    }
+    .services__items > h3{
+      
+        padding:0.4rem 0;
+        text-align: left;
+
     }
 }

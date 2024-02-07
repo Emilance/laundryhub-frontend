@@ -53,3 +53,19 @@
     border: none;
     color :#000;
   }
+
+  @media screen  and (max-width: 600px) {
+    .hero__content h1 {
+      font-size: 2.1rem;
+     
+    }
+    .hero__content h2 {
+      font-size: 1.4rem;
+   
+    }
+    .hero__cta {
+ 
+      padding: 1.5rem 2rem !important; 
+     
+    }
+  }

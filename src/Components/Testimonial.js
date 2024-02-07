@@ -20,7 +20,6 @@ function Testimonial() {
        fetchRating()
   },[])
 
-  
   return (
     <>
       {ratingsArray.length > 0 &&
@@ -38,7 +37,7 @@ function Testimonial() {
     >
       
      <div className="testimonial__item">
-          <h3>{ratingsArray[0].user.name}</h3>
+          <h3>{ratingsArray[0]?.user?.name}</h3>
           <h4>
           <div className="starRating">
                   {[...Array(5)].map((star, index) => {
@@ -48,7 +47,7 @@ function Testimonial() {
                  
                   <FaStar
                     className="star"
-                    color={ratingValue <=  ratingsArray[0].rating ? "#ffc107" : "#e4e5e9"}
+                    color={ratingValue <=  ratingsArray[0]?.rating ? "#ffc107" : "#e4e5e9"}
                     size={25}
                   />
                 </label>
@@ -60,8 +59,11 @@ function Testimonial() {
             {ratingsArray[0].feedback}
           </p>
           </div>
+
+          {ratingsArray[1]  && 
+          
           <div className="testimonial__item">
-          <h3>{ratingsArray[1].user.name}</h3>
+          <h3>{ratingsArray[1]?.user?.name}</h3>
           <h4>
           <div className="starRating">
                   {[...Array(5)].map((star, index) => {
@@ -83,8 +85,13 @@ function Testimonial() {
             {ratingsArray[1].feedback}
           </p>
           </div>
+        }
+
+          {ratingsArray[2] &&
+
+
           <div className="testimonial__item">
-          <h3>{ratingsArray[2].user.name}</h3>
+          <h3>{ratingsArray[2]?.user?.name}</h3>
           <h4>
           <div className="starRating">
                   {[...Array(5)].map((star, index) => {
@@ -106,6 +113,7 @@ function Testimonial() {
             {ratingsArray[2].feedback}
           </p>
           </div>
+          }
           
           
      

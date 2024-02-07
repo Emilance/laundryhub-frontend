@@ -75,4 +75,14 @@
     line-height: 1.5;
     color: #4b5563;
   }
+
+  @media screen  and (max-width: 600px) {
+    .home__about > h2 {
+  
+      margin-left: 2rem;
+      text-align: center;
+  
+   
+    }
+  }
   

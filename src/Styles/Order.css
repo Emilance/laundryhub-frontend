@@ -80,8 +80,20 @@
     .order__content{
         width: 85%;
         align-content: flex-start;
+
     }
     .order__content > img {
         display: none;
     }
+}
+
+@media (max-width : 600px) {
+   
+    .order__content{
+        width: 95%;
+        align-content: flex-start;     
+    }
+ 
+   
+   
 }

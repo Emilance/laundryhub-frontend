@@ -81,3 +81,11 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
+@media screen  and (max-width: 600px) {
+  .home__service > h2{
+    font-size:1.1rem;
+
+  }
+}

@@ -58,6 +58,9 @@ const MySchedule = () => {
       {bookings.length === 0 ? (
         <p>You have no bookings scheduled.</p>
       ) : (
+        <>
+        
+          <span>Click the dollar Icon to pay</span>
         <table className="schedule-table">
           <thead>
             <tr>
@@ -86,6 +89,7 @@ const MySchedule = () => {
             ))}
           </tbody>
         </table>
+        </>
       )}
     </div>
   );

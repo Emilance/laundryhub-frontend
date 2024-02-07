@@ -63,3 +63,15 @@
   transform: scale(1.05);
   color: #03a9f4;
 }
+
+
+
+@media screen  and (max-width: 600px) {
+  .schedule-container{
+     overflow-x: scroll;
+  }
+  .schedule-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
